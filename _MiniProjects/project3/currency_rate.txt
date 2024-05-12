@@ -1,0 +1,22 @@
+Name Rate
+Australian Dollar (AUD) 55.31
+Bahraini Dinar (BHD) 221.47
+British Pound (GBP) 104.72
+Canadian Dollar (CAD) 61.08
+Chinese Yuan (CNY) 11.58
+Danish Krone (DKK) 12.05
+Euro (EUR) 89.83
+Hong Kong Dollar (HKD) 10.68
+Iraqi Dinar (IQD) 0.06
+Japanese Yen (JPY) 0.54
+Kuwaiti Dinar (KWD) 271.54
+Omani Rial (OMR) 216.87
+Pakistani Rupee (PKR) 0.30
+Qatar Rial (QAR) 22.93
+Saudi Arabian Riyal (SAR) 22.26
+Singapore Dollar (SGD) 61.77
+South African Rand (ZAR) 4.52
+Swedish Krona (SEK) 7.72
+Swiss Franc (CHF) 92.11
+UAE Dirham (AED) 22.73
+US Dollar (USD) 83.50

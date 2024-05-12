@@ -1,0 +1,97 @@
+1. Absolute xpath: in absolute xpath user has to entire dom structure to find out the element
+             /html/body/div[3]/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div/div[4]/div[1]/div/div/div/div[1]/div/div/div/div[1]/div[2]/div[6]/input[1]
+
+2. Relative xpath: In relative xpath user has to jump specific element as per their attribute.
+            //tagname[@attribute='value']
+            //*[@attribute='value']
+
+            # https://automationbysqatools.blogspot.com/2021/05/dummy-website.html
+            //input[@name='fromcity']
+
+            https://www.facebook.com/
+            //input[@data-testid='royal_email']
+            //input[@aria-label='Email address or phone number']
+
+            //input[@placeholder='Password']
+            //button[@data-testid='royal_login_button']
+            //a[@data-testid="open-registration-form-button"]
+
+Basic XPath Methods
+
+1) Text Method :  //tagname[text()= 'text value']
+                 //div[text()="The password that you've entered is incorrect. "]
+                 //h2[text()='Facebook helps you connect and share with the people in your life.']
+
+2) Contains Method :
+                 //tagname[contains(text(), 'partial value')]
+                 //div[contains(text(), 'incorrect')]
+
+                 //tagname[contains(@attribute, 'attribute value')]
+                 //button[contains(@id, 'login')]
+                 //*[contains(@id, 'loginb')]
+                 //h2[contains(text(), 'Facebook')]
+
+3) Indexing with multiple match.
+                  (//input[@id='firstname'])[1]
+                  (//input[@id='firstname'])[2]
+
+4) Indentify element with parent reference:
+                   //div[@align='left']/ul/li[3]
+                   (//ul)[2]/li[3]
+                   //div[@id='passContainer']/input
+
+
+5) AND & OR Method : //tagname[@attrb1='value' and @attrib2='value']
+                     //input[@id='pass' and @name='pass']
+                     //input[@value='radio_345' and @type='radio']
+
+                     //tagname[@attrb1='value' or @attrib2='value']
+                     //h1[@align='center' or  text()=' Dummy Ticket Booking Website']
+                     //input[@value='radio_345' or @type='radio']
+
+############## Advance XPath Methods ##############
+# https://automationbysqatools.blogspot.com/2021/05/dummy-website.html
+
+1) Following method: This method helps to identify all the element coming after the
+              reference element on web page. it goes from top to bottom.
+
+              //tagname[@attrib='value']//following::tar_tagname[@attrib='value']
+              //h2[text()='Billing Details']//following::input[@id='billing_email']
+              //h1[contains(text(), 'Booking Website')]//following::input[@id='male']
+
+2) Following sibling method: This method helps to identify the younger element with help of
+               elder element sibling on the web page.
+
+               //tagname[@attrib='value']//following-sibling::tar_tagname[@attrib='value']
+               //span[text()='From']//following-sibling::p[text()='Enter city or airport']
+               //span[text()='To']//following-sibling::p[text()='Enter city or airport']
+               //div[@align='left']//li[2]//following-sibling::li
+               //table[@id='cities']//tr[4]//following-sibling::tr[1]
+
+3) preceding : This methods helps to identify all the elements which are coming before the reference
+                element, it follows the element bottom to top of the webpage.
+
+                //tagname[@attrib='value']//preceding::tar_tagname[@attrib='value']
+                //input[@id='street_address1']//preceding::input[@id='male']
+
+
+
+4) preceding-sibling : This method helps to indentify the elder element with reference of younger element
+                      on the webpage.
+
+                       //tagname[@attrib='value']//preceding-sibling::tar_tagname[@attrib='value']
+                       //table[@id='cities']//tr[4]//preceding-sibling::tr[1]
+
+
+5) parent : This method helps to identify parent element of any child element
+                       //tagname[@attrib='value']//parent::tar_tagname[@attrib='value']
+                       //td[text()='Indore']//parent::tr
+
+
+6) Ancestor : This method helps to identify the any grandparent or great grand parent element with
+              the help of child element.
+              //tagname[@attrib='value']//ancestor::tar_tagname[@attrib='value']
+
+
+
+

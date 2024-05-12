@@ -1,4 +1,4 @@
-print("Welcome to my testingY quiz game!")
+print("Welcome to my testing quiz game!")
 
 playing = input("Do you want to play?  ").lower()
 
