@@ -28,49 +28,13 @@ def top_size(size_code):
     """ xs=166 s=167 m=168 l= 169 xl=170"""
     driver.find_element(By.XPATH, f"//div[@id='option-label-size-143-item-{size_code}']").click()
 
-def bottom_size(size):
-    if size == 28:
-        driver.find_element(By.XPATH, "//div[@id='option-label-size-143-item-171']").click()
-    elif size == 29:
-        driver.find_element(By.XPATH, "//div[@id='option-label-size-143-item-172']").click()
-    elif size == 30:
-        driver.find_element(By.XPATH, "//div[@id='option-label-size-143-item-173']").click()
+def bottom_size(size_no):
+    #28=171,29=172,30=173,31=174,32=175,33=176,34=177,36=178:
+        driver.find_element(By.XPATH, f"//div[@id='option-label-size-143-item-{size_no}']").click()
 
-    elif size == 31:
-        driver.find_element(By.XPATH, "//div[@id='option-label-size-143-item-174']").click()
-    elif size == 32:
-        driver.find_element(By.XPATH, "//div[@id='option-label-size-143-item-175']").click()
-    elif size == 33:
-        driver.find_element(By.XPATH, "//div[@id='option-label-size-143-item-176']").click()
-    elif size == 34:
-        driver.find_element(By.XPATH, "//div[@id='option-label-size-143-item-177']").click()
-    elif size == 36:
-        driver.find_element(By.XPATH, "//div[@id='option-label-size-143-item-178']").click()
-
-
-def color(color):
-    if color== 'white':
-        driver.find_element(By.XPATH, "//div[@id='option-label-color-93-item-59']").click()
-    elif color == 'black':
-        driver.find_element(By.XPATH, "//div[@id='option-label-color-93-item-49']").click()
-    elif color == 'grey':
-        driver.find_element(By.XPATH, "//div[@id='option-label-color-93-item-52']").click()
-    elif color == 'blue':
-        driver.find_element(By.XPATH, "//div[@id='option-label-color-93-item-50']").click()
-    elif color =='purple':
-        driver.find_element(By.XPATH, "//div[@id='option-label-color-93-item-57']").click()
-    elif color =='yellow':
-        driver.find_element(By.XPATH, "//div[@id='option-label-color-93-item-60']").click()
-    elif color =='orange':
-        driver.find_element(By.XPATH, "//div[@id='option-label-color-93-item-56']").click()
-    elif color =='red':
-        driver.find_element(By.XPATH, "//div[@id='option-label-color-93-item-58']").click()
-    elif color == 'brown':
-        driver.find_element(By.XPATH, "//div[@id='option-label-color-93-item-51']").click()
-    elif color == 'green':
-        driver.find_element(By.XPATH, "//div[@id='option-label-color-93-item-53']").click()
-    else:
-        print("Color not available")
+def color(color_no):
+    #black=49 blue=50 brown=51 grey=52 green=53 orange = 56 purple=57 red=58 white=59 yellow=60
+        driver.find_element(By.XPATH, f"//div[@id='option-label-color-93-item-{color_no}']").click()
 
 
 def add_to_cart():
@@ -175,35 +139,35 @@ options(4)
 items("//a[text()='Jackets']")
 select_item("//a[contains(text(), 'Juno Jacket ')]")
 top_size(168)
-color('blue')
+color(50)
 add_to_cart()
 
 options(4)
 items("//a[contains(text(),'Tees')]")
 select_item("//a[contains(text(),'Gwyn Endurance Tee')]")
 top_size(167)
-color('yellow')
+color(60)
 add_to_cart()
 
 
 options(4)
 items("//a[text()='Pants']")
 select_item("//strong[@class='product name product-item-name']//parent::a[@href='https://magento.softwaretestingboard.com/ida-workout-parachute-pant.html']")
-bottom_size(29)
-color('black')
+bottom_size(172)
+color(49)
 add_to_cart()
 
 options(5)
 items("//a[text()='Hoodies & Sweatshirts']")
 select_item("//*[contains(text(),'Ajax Full-Zip Sweatshirt')]")
-color('blue')
+color(50)
 top_size(169)
 add_to_cart()
 
 options(5)
 items("//a[contains(text(),'Tanks')]")
 select_item("//a[contains(text(),'Sparta Gym')]")
-color('green')
+color(53)
 top_size(169)
 add_to_cart()
 
