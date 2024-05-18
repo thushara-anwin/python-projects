@@ -101,6 +101,7 @@ def cart_list():
     print("List Of Items in The Cart")
     print("________________________")
     cartlist =driver.find_elements(By.CSS_SELECTOR,"div.cart_list")
+    print("@@@@@@@@@@@@@",len(cartlist))
     with open("list_of_items_in_the_cart",'w') as f:
         for i in  range(len(cartlist)):
             f.write(cartlist[i].text)

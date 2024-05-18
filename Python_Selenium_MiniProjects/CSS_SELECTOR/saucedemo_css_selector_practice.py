@@ -2,6 +2,7 @@ import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
+from username_password import user1,pass_word
 
 driver =webdriver.Chrome()
 driver.maximize_window()
@@ -12,9 +13,9 @@ driver.get("https://www.saucedemo.com/")
 
 def login():
     user_name = driver.find_element(By.CSS_SELECTOR,"div.form_group>input#user-name")
-    user_name.send_keys("standard_user")
+    user_name.send_keys(user1)
     password = driver.find_element(By.CSS_SELECTOR,"div.form_group>input#password[name='password']")
-    password.send_keys("secret_sauce")
+    password.send_keys(pass_word)
     time.sleep(5)
     login=driver.find_element(By.CSS_SELECTOR,"div.form_group+div+div+input#login-button").click()
     time.sleep(5)
