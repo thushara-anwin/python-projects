@@ -29,13 +29,15 @@ def sign_in(email_id,pass_word):
     driver.find_element(By.CSS_SELECTOR,"input[name='login[password]']").send_keys(pass_word)
     driver.find_element(By.CSS_SELECTOR,"div.primary>button#send2>span").click()
 
-women = driver.find_element(By.XPATH,options['women'])
+#women = driver.find_element(By.XPATH,options['women'])
+women = driver.find_element(By.XPATH,"//a[@id='ui-id-4']")
 
 tops = driver.find_element(By.CSS_SELECTOR,"a#ui-id-9")
 bottoms = driver.find_element(By.CSS_SELECTOR,"a#ui-id-10")
 #pants= driver.find_element(By.CSS_SELECTOR,"a#ui-id-15")
-actions.move_to_element(women).move_to_element(tops).move_to_element(bottoms).click().perform()
-
+shorts=driver.find_element(By.CSS_SELECTOR,"a#ui-id-16")
+actions.move_to_element(women).move_to_element(tops).move_to_element(bottoms).move_to_element(shorts).click().perform()
+time.sleep(5)
 driver.find_element(By.XPATH,"//span[@class='product-image-wrapper']/img[@alt='Erika Running Short']").click()#selecting item
 driver.find_element(By.XPATH,bottom_size['28']).click()#size
 driver.find_element(By.XPATH,colors['green']).click()#color
@@ -43,7 +45,7 @@ driver.find_element(By.CSS_SELECTOR,"button#product-addtocart-button").click()#a
 time.sleep(5)
 driver.find_element(By.CSS_SELECTOR,"a.action.showcart").click()#click cart
 driver.find_element(By.CSS_SELECTOR,"button#top-cart-btn-checkout").click()#proceed to checkout
-def mailing_address(address):
+def guest_mailing_address(address):
     email = driver.find_element(By.XPATH,"//fieldset[@id='customer-email-fieldset']//input[@class='input-text'and @id='customer-email']")
     email.send_keys(address[0])
 
@@ -88,7 +90,7 @@ def mailing_address(address):
     phone.send_keys(address[9])
 
 
-mailing_address(address)
+#mailing_address(address)
 
 
 
