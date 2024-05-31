@@ -1,0 +1,7 @@
+"""
+command to execute code with custom commandline option
+python -m pytest -v --browser=chrome --headless=True .\tests\ui\dummy_booking\
+"""
+
+# command to generate report
+python -m pytest -v --browser=chrome --headless=True .\tests\ui\dummy_booking\ --html=logs/report.html
